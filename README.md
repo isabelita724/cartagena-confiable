@@ -99,3 +99,4 @@ Para publicar este proyecto:
 2. Ve a **Settings** > **Pages**.
 3. Selecciona la rama `main` y la carpeta `/ (root)`.
 4. Haz clic en **Save** y obtendrás la URL pública: `https://<tu-usuario>.github.io/cartagena-confiable/`.
+

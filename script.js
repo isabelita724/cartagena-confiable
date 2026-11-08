@@ -146,6 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navTgBtn) navTgBtn.setAttribute('href', cleanUrl);
     if (footerTgBtn) footerTgBtn.setAttribute('href', cleanUrl);
 
+    // Actualizar código QR en tiempo real
+    const qrImg = document.getElementById('qr-code-img');
+    if (qrImg) {
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(cleanUrl)}&color=0A2540`;
+    }
+
     // Feedback visual momentáneo
     if (updateLinkBtn) {
       const originalText = updateLinkBtn.textContent;
