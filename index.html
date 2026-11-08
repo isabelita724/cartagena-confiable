@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cartagena Confiable - Sistema Multi-Agente de Asistencia Turística Inteligente para proteger al visitante en Cartagena de Indias.">
+  <title>Cartagena Confiable | Asistente Turístico Inteligente</title>
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura superior -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- NAVEGACIÓN PRINCIPAL FIJA -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Inicio Cartagena Confiable">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-name">Cartagena Confiable</span>
+          <span class="brand-tagline">Sistema Multi-Agente IA</span>
+        </div>
+      </a>
+
+      <!-- Menú de enlaces de navegación -->
+      <nav class="nav-links" id="nav-menu">
+        <a href="#que-es" class="nav-link">¿Qué es?</a>
+        <a href="#problema" class="nav-link">El Problema</a>
+        <a href="#funciones" class="nav-link">Funciones</a>
+        <a href="#impacto" class="nav-link">Impacto</a>
+        <a href="#como-funciona" class="nav-link">Arquitectura</a>
+        <a href="#conceptos" class="nav-link">Conceptos</a>
+        <a href="#tecnologias" class="nav-link">Tecnologías</a>
+        <a href="#base-conocimiento" class="nav-link">Conocimiento</a>
+        <a href="#negocio" class="nav-link">Modelo & FinOps</a>
+        <a href="#roadmap" class="nav-link">Roadmap</a>
+        <a href="#equipo" class="nav-link">Equipo</a>
+        
+        <!-- Botón Modo Proyector para Conferencia -->
+        <button id="projector-mode-btn" class="nav-projector-toggle" title="Activar Modo Proyector (Mayor contraste y texto para auditorio)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span class="btn-proj-txt">Proyector</span>
+        </button>
+
+        <a href="#telegram-cta" class="nav-btn-highlight">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+          </svg>
+          Probar Bot
+        </a>
+      </nav>
+
+      <!-- Botón Hamburguesa Móvil -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Innovación Académica 2026 · Unicolombo</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Cartagena <span class="gradient-text">Confiable</span>
+          </h1>
+
+          <p class="hero-subtitle-tag">
+            Sistema Multi-Agente de Asistencia Turística Inteligente
+          </p>
+          
+          <p class="hero-summary-phrase">
+            "Cartagena Confiable es el guía turístico inteligente que protege al turista: le dice dónde ir, cuánto pagar, qué evitar y a quién llamar — en su idioma, por voz o texto, las 24 horas."
+          </p>
+
+          <div class="hero-actions">
+            <a href="#que-es" class="btn btn-primary">
+              <span>Conocer más</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#como-funciona" class="btn btn-secondary">
+              <span>Ver Arquitectura</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Puntos destacados de impacto rápido -->
+          <div class="hero-quick-stats">
+            <div class="quick-stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Idiomas Nativos</span>
+            </div>
+            <div class="quick-stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Telegram Nativo</span>
+            </div>
+            <div class="quick-stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">&lt; $18</span>
+              <span class="stat-label">USD / Mes FinOps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mockup Visual del Asistente en Smartphone -->
+        <div class="hero-visual">
+          <div class="phone-mockup-wrapper">
+            <div class="phone-mockup">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <div class="telegram-header">
+                  <div class="tg-avatar">CC</div>
+                  <div class="tg-info">
+                    <span class="tg-name">Cartagena Confiable</span>
+                    <span class="tg-status">en línea · Asistente IA</span>
+                  </div>
+                  <div class="tg-badge">Verificado</div>
+                </div>
+
+                <div class="telegram-chat-body">
+                  <div class="tg-message user">
+                    <p class="tg-text">¿Cuánto cuesta una lancha desde el Muelle de la Bodeguita a Playa Blanca?</p>
+                    <span class="tg-time">10:14 AM</span>
+                  </div>
+
+                  <div class="tg-message bot">
+                    <div class="bot-badge-tag">Agente de Precios · Tarifario Oficial</div>
+                    <p class="tg-text">
+                      🧭 <strong>Tarifa Oficial de Transporte Marítimo:</strong><br>
+                      • Pasaje ida y regreso: <strong>$85.000 COP</strong> por persona.<br>
+                      • Impuesto de muelle: <strong>$26.500 COP</strong> (taquilla oficial).<br>
+                      ⚠️ <em>Alerta: Si te exigen más de $115.000 COP total, es un sobreprecio. Compra únicamente en taquillas autorizadas dentro del muelle.</em>
+                    </p>
+                    <div class="audio-wave-preview">
+                      <span class="play-icon">▶</span>
+                      <div class="wave-bars">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                      </div>
+                      <span class="audio-duration">0:18 min</span>
+                    </div>
+                    <span class="tg-time">10:14 AM · Verificado</span>
+                  </div>
+
+                  <div class="tg-message user audio-user">
+                    <div class="user-voice-pill">
+                      <span>🎤 Nota de voz (inglés)</span>
+                      <span class="voice-len">0:06</span>
+                    </div>
+                    <span class="tg-time">10:15 AM</span>
+                  </div>
+
+                  <div class="tg-message bot">
+                    <div class="bot-badge-tag">Groq Whisper + gTTS</div>
+                    <p class="tg-text">
+                      "I understood your voice note! Here are the safe zones in Getsemaní right now..."
+                    </p>
+                    <span class="tg-time">10:15 AM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Elemento decorativo tropical -->
+            <div class="glow-sphere"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ¿QUÉ ES EL PROYECTO? -->
+    <section class="section section-alt" id="que-es">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Definición y Propósito</span>
+          <h2 class="section-title">¿Qué es <span class="gradient-text">Cartagena Confiable</span>?</h2>
+          <p class="section-description">
+            Un asistente turístico inteligente accesible directamente a través de <strong>Telegram</strong>, diseñado específicamente para salvaguardar la integridad, el patrimonio y la experiencia de los turistas nacionales e internacionales en Cartagena de Indias.
+          </p>
+        </div>
+
+        <div class="callout-card">
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="callout-content">
+            <h3>No es un chatbot genérico basado en respuestas automáticas predeterminadas</h3>
+            <p>
+              Es un <strong>Agente Conversacional Multimodal</strong> impulsado por una arquitectura de Inteligencia Artificial que procesa voz y texto en tiempo real, respaldado por una <strong>base de conocimiento local profundamente curada</strong> (tarifas de alcaldía, mapas de cuadrantes policiales, comercios auditados y alertas geolocalizadas).
+            </p>
+          </div>
+        </div>
+
+        <!-- Concepto de Proyecto vs Concepto de Chatbot -->
+        <div class="concept-duo-grid">
+          <div class="info-panel-box">
+            <div class="panel-header">
+              <span class="panel-icon">🏛️</span>
+              <div>
+                <h4 class="panel-title">El Concepto de Proyecto</h4>
+                <span class="panel-sub">Impacto Sistémico y Académico</span>
+              </div>
+            </div>
+            <p class="panel-body">
+              En el marco de la ingeniería de software moderna, este proyecto no es solo una aplicación aislada, sino una <strong>solución integral socio-tecnológica</strong>. Articula a la academia, el sector hotelero, los comercios formales y las autoridades para transformar un problema de ciudad en un ecosistema digital confiable y medible.
+            </p>
+            <div class="panel-footer-pill">Ingeniería con Impacto Social</div>
+          </div>
+
+          <div class="info-panel-box highlight-box">
+            <div class="panel-header">
+              <span class="panel-icon">🧠</span>
+              <div>
+                <h4 class="panel-title">Chatbot Rígido vs. Agente Multimodal</h4>
+                <span class="panel-sub">Evolución de la IA Conversacional</span>
+              </div>
+            </div>
+            <p class="panel-body">
+              Mientras un <em>chatbot tradicional</em> se limita a botones fijos y respuestas prefabricadas sin contexto real, nuestro <strong>Agente Inteligente</strong> comprende intenciones implícitas en lenguaje natural, escucha notas de voz, razona sobre tarifas dinámicas y orquesta subagentes especializados para entregar soluciones seguras en segundos.
+            </p>
+            <div class="panel-footer-pill">IA Cognitiva & Multimodal</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EL PROBLEMA -->
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag section-tag-danger">Diagnóstico Real</span>
+          <h2 class="section-title">El Problema que Enfrenta el Turista</h2>
+          <p class="section-description">
+            Cartagena de Indias es una joya histórica mundial, pero la experiencia del visitante se ve constantemente amenazada por vacíos de información, abusos económicos y desconexión de seguridad.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <!-- Tarjeta 1 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrapper danger-coral">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="problem-title">Estafas y Cobros Excesivos</h3>
+            <p class="problem-text">
+              Cobros desproporcionados en transporte marítimo (lanchas a Barú/Cholón), carreras de taxi no reguladas sin taxímetro y cuentas infladas hasta 10 veces su valor en carpas y restaurantes playeros.
+            </p>
+            <div class="problem-meta">Impacto: Pérdida económica y daño reputacional</div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrapper warning-amber">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="problem-title">Incertidumbre en Zonas de Riesgo</h3>
+            <p class="problem-text">
+              Los visitantes desconocen qué calles o perímetros son seguros de noche, ingresando inadvertidamente a sectores vulnerables con poca presencia policial o riesgos de hurto.
+            </p>
+            <div class="problem-meta">Impacto: Vulnerabilidad y temor constante</div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrapper info-blue">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="problem-title">Falta de Verificación Comercial</h3>
+            <p class="problem-text">
+              El turista no cuenta con una herramienta ágil para verificar si un operador turístico, carpa o restaurante está legalmente constituido y respaldado por la autoridad turística.
+            </p>
+            <div class="problem-meta">Impacto: Desamparo ante prestadores informales</div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrapper danger-coral">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3 class="problem-title">Emergencias sin Soporte Idiomático</h3>
+            <p class="problem-text">
+              Ante una eventualidad médica o policial, los turistas de habla no hispana no saben a qué líneas marcar ni cómo comunicarse eficazmente para recibir auxilio inmediato.
+            </p>
+            <div class="problem-meta">Impacto: Tiempo crítico perdido en incidentes</div>
+          </div>
+
+          <!-- Tarjeta 5 (Hotel Gap) -->
+          <div class="problem-card problem-card-wide">
+            <div class="problem-icon-wrapper teal-ocean">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="problem-title">La Brecha del Sector Hotelero</h3>
+              <p class="problem-text">
+                Aunque los hoteles brindan un servicio de hospitalidad excelente dentro de sus instalaciones, <strong>pierden la capacidad de proteger y orientar a su huésped en el momento exacto en que cruza la puerta hacia la ciudad</strong>. No existe un canal digital unificado que mantenga conectado al huésped con el hotel durante sus recorridos urbanos.
+              </p>
+              <div class="problem-meta">Impacto: Huéspedes expuestos y quejas recibidas en recepción a posteriori</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FUNCIONES DEL SISTEMA (13 TARJETAS) -->
+    <section class="section section-alt" id="funciones">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Capacidades del Asistente</span>
+          <h2 class="section-title">13 Funciones Diseñadas para Proteger</h2>
+          <p class="section-description">
+            Cada módulo ha sido concebido para responder con precisión, empatía y velocidad en cualquier rincón de Cartagena.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1. Multilingüe -->
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3 class="feature-title">Multilingüe Nativo</h3>
+            <p class="feature-text">
+              Fluidez total en español, inglés, portugués, francés y alemán. Detecta automáticamente el idioma de entrada y responde con tono natural y adaptado culturalmente.
+            </p>
+          </div>
+
+          <!-- 2. Voz Bidireccional -->
+          <div class="feature-card">
+            <div class="feature-icon">🎙️</div>
+            <h3 class="feature-title">Voz Bidireccional</h3>
+            <p class="feature-text">
+              Recibe audios y notas de voz espontáneas vía Telegram mediante Groq Whisper y responde con audio sintético claro (gTTS) para turistas en movimiento.
+            </p>
+          </div>
+
+          <!-- 3. Botón SOS -->
+          <div class="feature-card feature-card-sos">
+            <div class="feature-icon">🚨</div>
+            <h3 class="feature-title">Botón SOS de Emergencia</h3>
+            <p class="feature-text">
+              Activación de un toque para enlazar con la Policía Nacional (123), Ambulancia (125), Bomberos (119) y la línea directa de recepción del hotel afiliado.
+            </p>
+          </div>
+
+          <!-- 4. Sistema de Quejas -->
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3 class="feature-title">Sistema de Quejas y Reportes</h3>
+            <p class="feature-text">
+              Permite registrar inconformidades o abusos en segundos; genera un reporte estructurado que se notifica de inmediato al hotel para su gestión y soporte.
+            </p>
+          </div>
+
+          <!-- 5. Sitios Autorizados y Verificados -->
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3 class="feature-title">Sitios Autorizados & Verificados</h3>
+            <p class="feature-text">
+              Directorio riguroso de restaurantes, carpas, lancheros y agencias respaldadas con sellos de calidad y Registro Nacional de Turismo (RNT).
+            </p>
+          </div>
+
+          <!-- 6. Zonas de Riesgo y Zonas Seguras -->
+          <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3 class="feature-title">Zonas Seguras y de Riesgo</h3>
+            <p class="feature-text">
+              Mapeo de cuadrantes de seguridad urbana: recomienda qué sectores transitar según la franja horaria (día vs noche) y emite advertencias preventivas.
+            </p>
+          </div>
+
+          <!-- 7. Precios Justos y Veredicto de Sobreprecio -->
+          <div class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3 class="feature-title">Precios Justos & Veredicto</h3>
+            <p class="feature-text">
+              Compara cotizaciones contra el tarifario oficial de la Alcaldía de Cartagena y emite un veredicto instantáneo: <em>"Precio Justo"</em> o <em>"Alerta de Sobreprecio"</em>.
+            </p>
+          </div>
+
+          <!-- 8. Búsqueda de Lugares a Menos de 1 km -->
+          <div class="feature-card">
+            <div class="feature-icon">📍</div>
+            <h3 class="feature-title">Proximidad (&lt; 1 km)</h3>
+            <p class="feature-text">
+              Filtro georreferenciado que localiza farmacias, casas de cambio verificadas, cajeros y restaurantes en un radio menor a 1 kilómetro del usuario.
+            </p>
+          </div>
+
+          <!-- 9. Indicador de Actividad del Lugar -->
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Indicador de Actividad</h3>
+            <p class="feature-text">
+              Informa horarios de mayor afluencia, ambiente predominante (familiar, rumba, histórico) y momentos ideales para visitar atractivos sin aglomeraciones.
+            </p>
+          </div>
+
+          <!-- 10. Clima y Recomendaciones según la Hora -->
+          <div class="feature-card">
+            <div class="feature-icon">☀️</div>
+            <h3 class="feature-title">Clima & Alertas Horarias</h3>
+            <p class="feature-text">
+              Conexión con OpenWeatherMap para brindar pronóstico del tiempo, índice UV, advertencias de marejada y sugerencias contextuales según la hora del día.
+            </p>
+          </div>
+
+          <!-- 11. Rutas GPS con Google Maps -->
+          <div class="feature-card">
+            <div class="feature-icon">🧭</div>
+            <h3 class="feature-title">Rutas GPS con Google Maps</h3>
+            <p class="feature-text">
+              Generación de enlaces profundos para navegar a pie o en vehículo hacia el destino deseado a través de las rutas más concurridas y seguras.
+            </p>
+          </div>
+
+          <!-- 12. Modo Texto, Voz o Ambos -->
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3 class="feature-title">Modo Texto, Voz o Ambos</h3>
+            <p class="feature-text">
+              Flexibilidad total para el usuario: lee respuestas breves en pantalla o escucha el audio por auriculares si va caminando por las murallas o el muelle.
+            </p>
+          </div>
+
+          <!-- 13. Detección de Intención sin Botones -->
+          <div class="feature-card feature-card-highlight">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">Detección de Intención Natural</h3>
+            <p class="feature-text">
+              Sin botones rígidos ni árboles de decisión forzados. El usuario se expresa con modismos, jerga o preguntas complejas y el orquestador deduce el objetivo exacto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CÓMO MEJORA EL TURISMO EN CARTAGENA -->
+    <section class="section" id="impacto">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Valor Turístico Integral</span>
+          <h2 class="section-title">Transformando el Ecosistema Turístico</h2>
+          <p class="section-description">
+            Impacto positivo de triple hélice: beneficia al turista, empodera al comercio formal y potencia la reputación de Cartagena ante el mundo.
+          </p>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-number">01</div>
+            <h3 class="impact-title">Seguridad Efectiva del Turista</h3>
+            <p class="impact-text">
+              Reduce la vulnerabilidad de viajeros solitarios, familias y extranjeros ofreciéndoles un escudo informativo activo y acceso inmediato a fuerzas de auxilio.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">02</div>
+            <h3 class="impact-title">Transparencia Radical de Precios</h3>
+            <p class="impact-text">
+              Frena los cobros abusivos al empoderar al consumidor con datos oficiales de tarifas antes de pagar, desmontando intermediarios ilegales.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">03</div>
+            <h3 class="impact-title">Impulso a Comercios Formales</h3>
+            <p class="impact-text">
+              Canaliza el flujo de clientes directamente hacia negocios formales y artesanos certificados, premiando las buenas prácticas comerciales y el empleo formal.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">04</div>
+            <h3 class="impact-title">Atención 24/7 sin Barrera Idiomática</h3>
+            <p class="impact-text">
+              Disponibilidad ininterrumpida a cualquier hora de la noche, rompiendo la frustración lingüística de los turistas internacionales más exigentes.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">05</div>
+            <h3 class="impact-title">Ventaja Competitiva para Hoteles</h3>
+            <p class="impact-text">
+              El hotel entrega al huésped un "conserje digital de bolsillo" personalizado con su marca, garantizando soporte continuo fuera de sus instalaciones.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">06</div>
+            <h3 class="impact-title">Inteligencia de Datos Turísticos</h3>
+            <p class="impact-text">
+              Recopila métricas anonimizadas sobre preguntas frecuentes, zonas más consultadas e índices de sobreprecio para guiar políticas públicas de turismo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CÓMO FUNCIONA: DIAGRAMA VISUAL MULTI-AGENTE -->
+    <section class="section section-alt" id="como-funciona">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Ingeniería & Flujo de Datos</span>
+          <h2 class="section-title">¿Cómo Funciona la Arquitectura?</h2>
+          <p class="section-description">
+            Flujo end-to-end desde el mensaje del usuario en Telegram hasta la resolución coordinada por agentes especializados con recuperación en base de conocimiento.
+          </p>
+        </div>
+
+        <!-- DIAGRAMA VISUAL DEL SISTEMA -->
+        <div class="workflow-diagram-container">
+          <div class="workflow-steps">
+            <!-- Paso 1 -->
+            <div class="workflow-step-card" data-step="1">
+              <div class="step-badge">Paso 1</div>
+              <div class="step-icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h4 class="step-title">Turista en Telegram</h4>
+              <p class="step-desc">Envía consulta por <strong>Texto</strong> o <strong>Nota de Voz</strong> en cualquier idioma.</p>
+              <div class="step-tech">Groq Whisper (STT)</div>
+            </div>
+
+            <div class="workflow-arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="workflow-step-card step-orchestrator" data-step="2">
+              <div class="step-badge">Paso 2</div>
+              <div class="step-icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h4 class="step-title">Orquestador Central</h4>
+              <p class="step-desc">Analiza el contexto y <strong>clasifica la intención</strong> sin menús rígidos.</p>
+              <div class="step-tech">LangChain Router</div>
+            </div>
+
+            <div class="workflow-arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="workflow-step-card step-agents-group" data-step="3">
+              <div class="step-badge">Paso 3</div>
+              <h4 class="step-title">Agentes Especializados</h4>
+              <div class="micro-agents-list">
+                <div class="micro-agent-item agent-sec">
+                  <span class="micro-dot"></span>
+                  <strong>Agente de Seguridad</strong>
+                  <small>Zonas, SOS y Cuadrantes</small>
+                </div>
+                <div class="micro-agent-item agent-exp">
+                  <span class="micro-dot"></span>
+                  <strong>Agente de Experiencia</strong>
+                  <small>Clima, Sitios y Distancias</small>
+                </div>
+                <div class="micro-agent-item agent-prc">
+                  <span class="micro-dot"></span>
+                  <strong>Agente de Precios</strong>
+                  <small>Tarifarios y Veredictos</small>
+                </div>
+              </div>
+              <div class="step-tech">Multi-Agent System</div>
+            </div>
+
+            <div class="workflow-arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="workflow-step-card step-rag" data-step="4">
+              <div class="step-badge">Paso 4</div>
+              <div class="step-icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h4 class="step-title">RAG Curado</h4>
+              <p class="step-desc">Recupera información fidedigna de Obsidian Markdown sin alucinar.</p>
+              <div class="step-tech">Obsidian Knowledge Base</div>
+            </div>
+
+            <div class="workflow-arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="workflow-step-card step-output" data-step="5">
+              <div class="step-badge">Paso 5</div>
+              <div class="step-icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h4 class="step-title">Respuesta Multimodal</h4>
+              <p class="step-desc">Genera el mensaje en texto formateado y/o <strong>audio de voz</strong> natural.</p>
+              <div class="step-tech">DeepSeek + gTTS Audio</div>
+            </div>
+          </div>
+
+          <div class="diagram-footer-caption text-center">
+            <span class="caption-icon">⚡</span>
+            <span>Tiempo promedio de respuesta: <strong>&lt; 1.8 segundos</strong> con tolerancia a fallos e inferencia continua.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONCEPTOS CLAVE (1-2 LÍNEAS CADA UNO) -->
+    <section class="section" id="conceptos">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Fundamentos Teóricos</span>
+          <h2 class="section-title">Conceptos Clave del Proyecto</h2>
+          <p class="section-description">
+            Las bases de ingeniería de software e inteligencia artificial explicadas de forma concisa para el público de la conferencia.
+          </p>
+        </div>
+
+        <div class="concepts-grid">
+          <div class="concept-card">
+            <div class="concept-icon-tag">🤖</div>
+            <h3 class="concept-term">Agente Conversacional Multimodal</h3>
+            <p class="concept-def">
+              Sistema de IA capaz de interpretar, procesar y generar información combinando simultáneamente texto, notas de voz estructuradas e imágenes.
+            </p>
+          </div>
+
+          <div class="concept-card">
+            <div class="concept-icon-tag">🧩</div>
+            <h3 class="concept-term">Sistema Multi-Agente (MAS)</h3>
+            <p class="concept-def">
+              Arquitectura modular donde agentes especializados y autónomos (Seguridad, Precios, Experiencia) resuelven sub-problemas bajo la batuta de un orquestador.
+            </p>
+          </div>
+
+          <div class="concept-card">
+            <div class="concept-icon-tag">🔍</div>
+            <h3 class="concept-term">RAG (Retrieval-Augmented Generation)</h3>
+            <p class="concept-def">
+              Técnica que ancla las respuestas del modelo a documentos oficiales y verificados antes de generar texto, eliminando las alucinaciones de la IA.
+            </p>
+          </div>
+
+          <div class="concept-card">
+            <div class="concept-icon-tag">🛡️</div>
+            <h3 class="concept-term">Inferencia Híbrida con Tolerancia a Fallos</h3>
+            <p class="concept-def">
+              Estrategia de respaldo automático (fallback) que conmuta entre diferentes proveedores de LLM si uno sufre latencia o indisponibilidad temporal.
+            </p>
+          </div>
+
+          <div class="concept-card">
+            <div class="concept-icon-tag">📚</div>
+            <h3 class="concept-term">Base de Conocimiento Curada</h3>
+            <p class="concept-def">
+              Colección estructurada de datos locales (tarifas, zonas seguras, directorio de auxilio) gestionada en Markdown desacoplada del código fuente.
+            </p>
+          </div>
+
+          <div class="concept-card">
+            <div class="concept-icon-tag">💰</div>
+            <h3 class="concept-term">FinOps (Financial Operations)</h3>
+            <p class="concept-def">
+              Práctica de optimización en la nube que maximiza el rendimiento del sistema manteniendo costos mínimos de consumo de tokens y servidores.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. HERRAMIENTAS Y TECNOLOGÍAS (TARJETAS CON FUNCIÓN) -->
+    <section class="section section-alt" id="tecnologias">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Stack Tecnológico</span>
+          <h2 class="section-title">Herramientas y Tecnologías</h2>
+          <p class="section-description">
+            Conjunto robusto de tecnologías de vanguardia seleccionadas por su confiabilidad, velocidad y eficiencia de costos.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+          <!-- 1. Python -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Core Backend</div>
+            <h3 class="tech-name">Python 3.14</h3>
+            <p class="tech-role">
+              Lenguaje principal del servidor. Maneja la lógica asíncrona, el procesamiento de audio, la orquestación y la interacción con APIs externas.
+            </p>
+          </div>
+
+          <!-- 2. python-telegram-bot -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Interfaz de Usuario</div>
+            <h3 class="tech-name">python-telegram-bot</h3>
+            <p class="tech-role">
+              Librería asíncrona para comunicación nativa con Telegram: gestión de mensajes de texto, recepción de notas de voz OGG y envío de multimedia.
+            </p>
+          </div>
+
+          <!-- 3. DeepSeek -->
+          <div class="tech-card">
+            <div class="tech-badge-category">LLM Principal</div>
+            <h3 class="tech-name">DeepSeek</h3>
+            <p class="tech-role">
+              Modelo de lenguaje de última generación optimizado para razonamiento lógico y generación de texto en español a un costo por token sumamente bajo.
+            </p>
+          </div>
+
+          <!-- 4. Google Gemini -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Visión Multimodal</div>
+            <h3 class="tech-name">Google Gemini</h3>
+            <p class="tech-role">
+              Modelo con capacidades visuales avanzadas preparado para la auditoría de fotos de cartas de restaurantes y recibos de cobro.
+            </p>
+          </div>
+
+          <!-- 5. Groq Whisper -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Speech to Text</div>
+            <h3 class="tech-name">Groq Whisper</h3>
+            <p class="tech-role">
+              Inferencia de Whisper acelerada por chips LPU de Groq: transcribe notas de voz de cualquier duración en menos de 300 milisegundos.
+            </p>
+          </div>
+
+          <!-- 6. gTTS -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Text to Speech</div>
+            <h3 class="tech-name">gTTS</h3>
+            <p class="tech-role">
+              Google Text-to-Speech: sintetiza las respuestas clave del asistente en notas de voz con acento y pronunciación claros para el turista.
+            </p>
+          </div>
+
+          <!-- 7. LangChain -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Orquestación IA</div>
+            <h3 class="tech-name">LangChain</h3>
+            <p class="tech-role">
+              Framework para el encadenamiento de prompts, enrutamiento semántico entre agentes y conexión con las fuentes documentales RAG.
+            </p>
+          </div>
+
+          <!-- 8. Google Maps API -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Geolocalización</div>
+            <h3 class="tech-name">Google Maps API</h3>
+            <p class="tech-role">
+              Cálculo de distancias y generación de enlaces de navegación asistida hacia sitios de interés y puntos de auxilio en tiempo real.
+            </p>
+          </div>
+
+          <!-- 9. OpenWeatherMap API -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Condiciones Climáticas</div>
+            <h3 class="tech-name">OpenWeatherMap API</h3>
+            <p class="tech-role">
+              Consulta de temperatura, probabilidad de lluvias, vientos costeros e índice solar en Cartagena para enriquecer las recomendaciones.
+            </p>
+          </div>
+
+          <!-- 10. Obsidian -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Base de Datos Viva</div>
+            <h3 class="tech-name">Obsidian (Markdown)</h3>
+            <p class="tech-role">
+              Almacén modular de conocimiento en archivos planos Markdown. Permite actualizar tarifas o alertas sin reiniciar ni compilar el sistema.
+            </p>
+          </div>
+
+          <!-- 11. NSSM -->
+          <div class="tech-card">
+            <div class="tech-badge-category">Infraestructura 24/7</div>
+            <h3 class="tech-name">NSSM</h3>
+            <p class="tech-role">
+              Non-Sucking Service Manager: ejecuta el bot como un servicio nativo de Windows continuo y autorrecuperable con reinicio automático ante cortes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. BASE DE CONOCIMIENTO Y ESCALABILIDAD -->
+    <section class="section" id="base-conocimiento">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Datos Curados & Arquitectura Desacoplada</span>
+          <h2 class="section-title">Base de Conocimiento Local</h2>
+          <p class="section-description">
+            La inteligencia del sistema radica en la calidad de sus datos. Cuatro pilares verificados que garantizan certidumbre absoluta.
+          </p>
+        </div>
+
+        <div class="kb-pillars-grid">
+          <div class="kb-pillar-card">
+            <div class="kb-icon">🏛️</div>
+            <h3 class="kb-title">Sitios Autorizados</h3>
+            <p class="kb-desc">
+              Listado con Registro Nacional de Turismo (RNT), restaurantes certificados, operadores de lanchas aprobados por DIMAR y cooperativas de carpas reguladas.
+            </p>
+          </div>
+
+          <div class="kb-pillar-card">
+            <div class="kb-icon">🛡️</div>
+            <h3 class="kb-title">Zonas de Riesgo y Seguras</h3>
+            <p class="kb-desc">
+              Cartografía de cuadrantes urbanos: Centro Histórico, San Diego, Getsemaní, Bocagrande, Laguito, Castillogrande y zonas de precaución perimetral.
+            </p>
+          </div>
+
+          <div class="kb-pillar-card">
+            <div class="kb-icon">🏷️</div>
+            <h3 class="kb-title">Tarifas Oficiales</h3>
+            <p class="kb-desc">
+              Tarifario de decretos distritales de taxis (carreras mínimas y recargos nocturnos), transporte a islas, precios máximos sugeridos de carpas y masajes.
+            </p>
+          </div>
+
+          <div class="kb-pillar-card">
+            <div class="kb-icon">📞</div>
+            <h3 class="kb-title">Directorio de Emergencias</h3>
+            <p class="kb-desc">
+              Líneas directas de CAI Turístico, Policía de Turismo, Capitanía de Puerto, Centros Hospitalarios (Clínica Medihelp, Serena del Mar) y Defensa Civil.
+            </p>
+          </div>
+        </div>
+
+        <!-- DESTACADO DE ESCALABILIDAD ZERO-CODE -->
+        <div class="scalability-banner">
+          <div class="scalability-badge">Ventaja Arquitectónica Clave</div>
+          <h3 class="scalability-title">
+            Escalabilidad a Cualquier Ciudad Sin Tocar una Sola Línea de Código
+          </h3>
+          <p class="scalability-text">
+            Al haber desacoplado completamente la lógica de orquestación de la base de conocimiento en Obsidian, <strong>el sistema puede replicarse mañana en Santa Marta, Medellín, San Andrés o Cancún</strong> simplemente cambiando la carpeta de archivos Markdown. El motor de IA, el enrutador multi-agente y la interfaz de Telegram continúan operando de forma idéntica.
+          </p>
+          <div class="scalability-tags">
+            <span>✓ Cero reescritura de código</span>
+            <span>✓ Actualización en caliente (Hot-Reload)</span>
+            <span>✓ Curaduría descentralizada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. MODELO DE NEGOCIO Y FINOPS -->
+    <section class="section section-alt" id="negocio">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Sostenibilidad & Finanzas</span>
+          <h2 class="section-title">Modelo de Negocio & Eficiencia FinOps</h2>
+          <p class="section-description">
+            Ecosistema autosostenible de triple impacto donde el turista no paga nada y los costos operativos son mínimos.
+          </p>
+        </div>
+
+        <!-- Flujo Visual del Modelo de Negocio -->
+        <div class="business-flow-wrapper">
+          <div class="business-flow-grid">
+            <div class="biz-actor-card">
+              <div class="biz-actor-badge">Cliente B2B</div>
+              <div class="biz-actor-icon">🏨</div>
+              <h3 class="biz-actor-title">Hoteles Afiliados</h3>
+              <p class="biz-actor-desc">
+                Pagan una <strong>suscripción mensual SaaS</strong> para entregar a sus huéspedes un conserje inteligente personalizado, recibir reportes de quejas al instante y blindar su reputación.
+              </p>
+              <div class="biz-money-tag incoming">+ Suscripción SaaS Recurrente</div>
+            </div>
+
+            <div class="biz-actor-card">
+              <div class="biz-actor-badge">Aliados Comerciales</div>
+              <div class="biz-actor-icon">🍽️</div>
+              <h3 class="biz-actor-title">Comercios Autorizados</h3>
+              <p class="biz-actor-desc">
+                Restaurantes, tours y clubes de playa verificados pagan por <strong>certificación y recomendación prioritaria</strong> en los veredictos del asistente.
+              </p>
+              <div class="biz-money-tag incoming">+ Membresía de Verificación</div>
+            </div>
+
+            <div class="biz-actor-card biz-actor-free">
+              <div class="biz-actor-badge highlight-free">Usuario Final</div>
+              <div class="biz-actor-icon">🧳</div>
+              <h3 class="biz-actor-title">El Turista</h3>
+              <p class="biz-actor-desc">
+                Disfruta de protección, alertas de precios, botones SOS y orientación multimodal de forma <strong>100% gratuita</strong>, sin registros molestos ni descargas de apps pesadas.
+              </p>
+              <div class="biz-money-tag free-tag">100% Gratuito en Telegram</div>
+            </div>
+          </div>
+
+          <!-- Futuras Líneas de Monetización -->
+          <div class="future-revenue-bar">
+            <strong>🚀 Oportunidades Futuras de Monetización:</strong>
+            <span>Comisiones transparentes por reservas oficiales de tours</span> •
+            <span>Venta de analítica agregada y anonimizada de consumo a gremios turísticos (COTELCO, MinComercio)</span>
+          </div>
+        </div>
+
+        <!-- CUADRO FINOPS: COSTO OPERATIVO MENOR A 18 USD -->
+        <div class="finops-card">
+          <div class="finops-header">
+            <div>
+              <span class="finops-tag">Análisis FinOps (Financial Operations)</span>
+              <h3 class="finops-title">Viabilidad Económica Extrema</h3>
+            </div>
+            <div class="finops-price-pill">
+              <span class="price-val">&lt; $18 USD</span>
+              <span class="price-curr">/ mes (~$70.000 COP)</span>
+            </div>
+          </div>
+
+          <div class="finops-body">
+            <p>
+              Gracias al uso eficiente de tokens con modelos de última generación (DeepSeek para inferencia de texto y Groq Whisper para transcripción casi sin coste), atender <strong>10.000 consultas mensuales</strong> cuesta menos de lo que cuesta una cena en la ciudad.
+            </p>
+
+            <div class="finops-breakdown-grid">
+              <div class="finops-item">
+                <span class="finops-item-label">Consultas Mensuales Estimadas</span>
+                <span class="finops-item-val">10.000 interacciones</span>
+              </div>
+              <div class="finops-item">
+                <span class="finops-item-label">Costo LLM Texto (DeepSeek)</span>
+                <span class="finops-item-val">~$4.50 USD</span>
+              </div>
+              <div class="finops-item">
+                <span class="finops-item-label">Transcripción Voz (Groq Whisper)</span>
+                <span class="finops-item-val">~$2.80 USD</span>
+              </div>
+              <div class="finops-item">
+                <span class="finops-item-label">Hosting & Almacenamiento RAG</span>
+                <span class="finops-item-val">~$10.00 USD</span>
+              </div>
+            </div>
+
+            <div class="finops-summary-statement">
+              ⚡ <strong>Margen Operativo Bruto:</strong> Con una sola suscripción hotelera de $50 USD/mes, el proyecto cubre el 100% de su infraestructura técnica y genera rentabilidad neta desde el primer día.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. ESTADO ACTUAL Y PRÓXIMOS PASOS (ROADMAP) -->
+    <section class="section" id="roadmap">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Madurez Tecnológica</span>
+          <h2 class="section-title">Estado Actual & Próximos Pasos</h2>
+          <p class="section-description">
+            Lo que ya es una realidad operativa hoy y las innovaciones planificadas para las siguientes fases de desarrollo.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- Columna 1: Ya Funciona -->
+          <div class="roadmap-column current-state">
+            <div class="column-header">
+              <div class="header-icon check-green">✓</div>
+              <div>
+                <h3 class="col-title">Ya Funciona Hoy (Fase MVP 1.0)</h3>
+                <span class="col-sub">100% Operativo y Testeado</span>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li class="roadmap-item">
+                <span class="item-check">✓</span>
+                <div>
+                  <strong>Bot de Telegram Nativo</strong>
+                  <p>Interacción fluida con usuarios reales en tiempo real sin caídas.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-check">✓</span>
+                <div>
+                  <strong>Voz Bidireccional Completa</strong>
+                  <p>Escucha notas de voz con Groq Whisper y responde con audio claro vía gTTS.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-check">✓</span>
+                <div>
+                  <strong>Orquestación Multi-Agente con LangChain</strong>
+                  <p>Enrutamiento dinámico a agentes de Seguridad, Precios y Experiencia.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-check">✓</span>
+                <div>
+                  <strong>Base de Conocimiento RAG en Obsidian</strong>
+                  <p>Verificación de tarifas oficiales y cuadrantes de seguridad sin alucinaciones.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-check">✓</span>
+                <div>
+                  <strong>Botón SOS y Sistema de Quejas</strong>
+                  <p>Enlaces directos a líneas de auxilio y estructuración de quejas al hotel.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna 2: Roadmap Futuro -->
+          <div class="roadmap-column future-state">
+            <div class="column-header">
+              <div class="header-icon rocket-purple">🚀</div>
+              <div>
+                <h3 class="col-title">Próximos Pasos (Roadmap 2.0)</h3>
+                <span class="col-sub">En Proceso de Expansión</span>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li class="roadmap-item">
+                <span class="item-target">🔜</span>
+                <div>
+                  <strong>Visión Artificial con Google Gemini Vision</strong>
+                  <p>El turista toma una foto a la carta del restaurante o al recibo de la lancha y la IA audita los precios automáticamente.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-target">🔜</span>
+                <div>
+                  <strong>Escaneo de Códigos QR Verificados</strong>
+                  <p>Stickers QR en carpas y taxis que el turista escanea para validar instantáneamente la legalidad del prestador.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-target">🔜</span>
+                <div>
+                  <strong>Panel Web de Control para Hoteles (Dashboard)</strong>
+                  <p>Interfaz SaaS para que los administradores de los hoteles visualicen quejas, incidencias y reportes en tiempo real.</p>
+                </div>
+              </li>
+              <li class="roadmap-item">
+                <span class="item-target">🔜</span>
+                <div>
+                  <strong>Despliegue Multi-Cloud de Alta Disponibilidad</strong>
+                  <p>Migración hacia contenedores serverless para soportar picos de alta temporada turística nacional e internacional.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. EQUIPO CREADOR -->
+    <section class="section section-alt" id="equipo">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Autores del Proyecto</span>
+          <h2 class="section-title">Equipo Creador</h2>
+          <p class="section-description">
+            Estudiantes de <strong>Tecnología En Desarrollo De Sistemas De Información Y De Software</strong> en la <strong>Fundación Universitaria Colombo Internacional (Unicolombo)</strong>.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Miembro 1: Isabella Torres Yepes -->
+          <div class="team-card">
+            <div class="team-photo-container">
+              <div class="team-photo-placeholder">
+                <span class="photo-initials">IT</span>
+                <span class="photo-hint">Espacio para Foto</span>
+              </div>
+              <div class="team-role-badge">Desarrolladora</div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Isabella Torres Yepes</h3>
+              <p class="team-institution">Unicolombo · Cartagena de Indias</p>
+              <p class="team-desc">
+                Desarrollo de arquitectura conversacional, diseño de flujos multiagente, integración de servicios de voz e implementación de la base de conocimiento curada en Obsidian.
+              </p>
+              <div class="team-tags">
+                <span>Multi-Agent AI</span>
+                <span>Python</span>
+                <span>LangChain</span>
+                <span>FinOps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Miembro 2: Andrés David Rodríguez Cantillo -->
+          <div class="team-card">
+            <div class="team-photo-container">
+              <div class="team-photo-placeholder">
+                <span class="photo-initials">AR</span>
+                <span class="photo-hint">Espacio para Foto</span>
+              </div>
+              <div class="team-role-badge">Desarrollador</div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Andrés David Rodríguez Cantillo</h3>
+              <p class="team-institution">Unicolombo · Cartagena de Indias</p>
+              <p class="team-desc">
+                Desarrollo del motor de integración con Telegram, georreferenciación de cuadrantes de seguridad, lógica de verificación tarifaria y resiliencia del servicio 24/7 con NSSM.
+              </p>
+              <div class="team-tags">
+                <span>Backend Python</span>
+                <span>APIs Geográficas</span>
+                <span>Telegram API</span>
+                <span>DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sello de la Institución -->
+        <div class="institution-box text-center">
+          <span class="inst-icon">🎓</span>
+          <div>
+            <h4>Fundación Universitaria Colombo Internacional — UNICOLOMBO</h4>
+            <p>Tecnología En Desarrollo De Sistemas De Información Y De Software · Proyecto de Innovación y Grado 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. SECCIÓN DE PRUEBA EN VIVO Y CÓDIGO QR -->
+    <section class="section telegram-cta-section" id="telegram-cta">
+      <div class="container">
+        <div class="cta-inner-card">
+          <div class="cta-content">
+            <span class="cta-tag">Demostración en Directo</span>
+            <h2 class="cta-title">¿Listo para Probar el Bot en Telegram?</h2>
+            <p class="cta-description">
+              Escanea el código QR desde tu celular o haz clic en el botón para interactuar en vivo con el asistente turístico. Hazle una pregunta en voz o texto sobre tarifas de taxis o zonas seguras.
+            </p>
+            
+            <div class="cta-actions">
+              <a href="https://t.me/TuBotCartagenaConfiable" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="main-tg-btn">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                <span>Probar el bot en Telegram</span>
+              </a>
+
+              <div class="link-placeholder-edit">
+                <label for="tg-link-input">Enlace actual del bot:</label>
+                <div class="input-with-button">
+                  <input type="text" id="tg-link-input" value="https://t.me/TuBotCartagenaConfiable" spellcheck="false">
+                  <button type="button" id="update-link-btn" class="btn btn-secondary btn-small">Actualizar</button>
+                </div>
+                <small class="hint-text">💡 Puedes escribir aquí el usuario real de tu bot de Telegram y se actualizará en todo el sitio.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Código QR Interactivo para Proyector -->
+          <div class="cta-qr-box">
+            <div class="qr-frame">
+              <!-- Código QR en SVG vectorial de alta nitidez para proyectores -->
+              <svg id="qr-code-svg" viewBox="0 0 200 200" width="180" height="180" class="qr-svg">
+                <rect width="200" height="200" fill="#ffffff" rx="12"/>
+                <!-- Patrones de esquinas QR estándar -->
+                <path d="M20 20h50v50h-50z M30 30h30v30h-30z M40 40h10v10h-10z" fill="#0A2540"/>
+                <path d="M130 20h50v50h-50z M140 30h30v30h-30z M150 40h10v10h-10z" fill="#0A2540"/>
+                <path d="M20 130h50v50h-50z M30 140h30v30h-30z M40 150h10v10h-10z" fill="#0A2540"/>
+                <!-- Puntos de datos decorativos representativos -->
+                <rect x="80" y="25" width="10" height="10" fill="#0077B6"/>
+                <rect x="100" y="25" width="10" height="20" fill="#0A2540"/>
+                <rect x="85" y="45" width="20" height="10" fill="#00B4D8"/>
+                <rect x="80" y="70" width="10" height="10" fill="#0A2540"/>
+                <rect x="100" y="70" width="30" height="10" fill="#0077B6"/>
+                <rect x="25" y="85" width="20" height="10" fill="#0A2540"/>
+                <rect x="55" y="85" width="10" height="25" fill="#00B4D8"/>
+                <rect x="80" y="90" width="40" height="20" fill="#0A2540"/>
+                <rect x="135" y="85" width="15" height="15" fill="#0077B6"/>
+                <rect x="160" y="90" width="20" height="10" fill="#0A2540"/>
+                <rect x="25" y="115" width="15" height="10" fill="#00B4D8"/>
+                <rect x="80" y="125" width="15" height="25" fill="#0A2540"/>
+                <rect x="110" y="120" width="25" height="10" fill="#0077B6"/>
+                <rect x="150" y="115" width="30" height="20" fill="#0A2540"/>
+                <rect x="80" y="160" width="20" height="20" fill="#00B4D8"/>
+                <rect x="110" y="150" width="15" height="30" fill="#0A2540"/>
+                <rect x="140" y="150" width="30" height="15" fill="#0077B6"/>
+                <rect x="150" y="170" width="20" height="10" fill="#0A2540"/>
+                <!-- Logo central miniatura -->
+                <circle cx="100" cy="100" r="16" fill="#00B4D8"/>
+                <path d="M96 95l8 5-8 5z" fill="#ffffff"/>
+              </svg>
+            </div>
+            <span class="qr-label">Escanea con tu celular en la conferencia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. PIE DE PÁGINA (FOOTER) -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-symbol">🌊</span>
+            <span class="footer-title">Cartagena Confiable</span>
+          </div>
+          <p class="footer-tech-name">
+            <strong>Nombre Técnico:</strong> Sistema Multi-Agente de Asistencia Turística Inteligente
+          </p>
+          <p class="footer-academic">
+            Proyecto Académico de Investigación e Innovación Aplicada · <strong>2026</strong><br>
+            <strong>Fundación Universitaria Colombo Internacional (Unicolombo)</strong>
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Secciones</h4>
+          <ul>
+            <li><a href="#que-es">¿Qué es?</a></li>
+            <li><a href="#problema">El Problema</a></li>
+            <li><a href="#funciones">13 Funciones</a></li>
+            <li><a href="#como-funciona">Arquitectura</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Innovación</h4>
+          <ul>
+            <li><a href="#conceptos">Conceptos Clave</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#negocio">Modelo & FinOps</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Contacto</h4>
+          <p class="footer-contact-text">
+            Isabella Torres Yepes<br>
+            Andrés David Rodríguez Cantillo<br>
+            Cartagena de Indias, Colombia
+          </p>
+          <a href="#telegram-cta" class="footer-btn-test">Probar en Telegram</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Cartagena Confiable · Todos los derechos reservados. Desarrollado con HTML, CSS y JavaScript puros.</p>
+        <div class="footer-badges">
+          <span class="f-badge">Unicolombo 2026</span>
+          <span class="f-badge">Multi-Agent AI</span>
+          <span class="f-badge">Telegram Bot</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Volver Arriba Flotante -->
+  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
